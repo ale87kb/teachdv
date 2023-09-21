@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #cacaca;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contenedor{
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.4);
+}
+main{
+    overflow: auto;
+}
+header{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #dddddd;
+    padding: 10px 0;
+    color:#514535;
+}
+section{
+    margin: 20px 0;
+}
+figure{
+    font-size: 0;
+}
+img{
+    max-width: 100%;
+    width: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #4f4236;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color .2s, color .2s, text-shadow .2s;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+    background-color: #856f5b;
+    box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.5),
+    inset 0px -1px 1px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow:  inset 0px 1px 1px 0px rgba(0,0,0,0.5),
+    inset 0px -1px 1px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow:  inset 0px 1px 1px 0px rgba(0,0,0,0.5),
+    inset 0px -1px 1px 0px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.tarjeta{
+    border-radius: 15px;
+    background: #ffffff;
+    background: linear-gradient(270deg,#ffffff 0%, #aa9178 80%);
+    background: -webkit-linear-gradient(270deg,#ffffff 0%, #aa9178 80%);
+    background: -moz-linear-gradient(270deg,#ffffff 0%, #aa9178 80%);
+    box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.9),
+    inset 0px -2px 1px 0px rgba(0,0,0,0.9);
+    -webkit-box-shadow:  inset 0px 2px 1px 0px rgba(0,0,0,0.9),
+    inset 0px -2px 1px 0px rgba(0,0,0,0.9);
+    -moz-box-shadow:  inset 0px 2px 1px 0px rgba(0,0,0,0.9),
+    inset 0px -2px 1px 0px rgba(0,0,0,0.9);
+}
+.tarjeta:hover{
+    background: #ffffff;
+    background: linear-gradient(90deg,#ffffff 0%, #aa9178 80%);
+    background: -webkit-linear-gradient(90deg,#ffffff 0%, #aa9178 80%);
+    background: -moz-linear-gradient(90deg,#ffffff 0%, #aa9178 80%);
+}
+.t_boton{
+    text-align: center;
+    padding: 20px;
+}
+.col2{
+    /*Le quito al total del section los 30px de margen para dos columnas (.margin2) y obtengo cuanto tendría que ocupar cada columna*/
+    width: 48.61%;
+    /*Recordar que existe una regla que si no comentamos el "espacio" en el HTML de los elementos inline-block, quedrá 1px entre medio de ambos.*/
+    display: inline-block;
+}
+.col3{
+    /*Le quito al total del section los 30px de margen para tres columnas (.margin3) y obtengo cuanto tendría que ocupar cada columna*/
+    width: 31.48%;
+    display: inline-block;
+}
+.margin3{
+    margin: 0 15px;
+}
+.margin2{
+    margin-left: 15px;
+}
+footer{
+    text-align: center;
+}
