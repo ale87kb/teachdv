@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header, footer, section{
+    width: 100%;
+}
+header{
+    /*header con height fijo*/
+    height: 80px;
+    background-color: black;
+}
+header div h1{
+    color: white;
+    /*Logo de al menos 150px de width y 50px de height*/
+    background:url(imagenes/logo-davinci-blanco.svg) no-repeat center;
+    width: 160px;
+    text-indent: -999px;
+    margin: 0 auto;
+    line-height: 80px;
+    overflow: hidden;
+}
+footer {
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+}
+footer div{
+    /*footer con 30px de padding*/
+    padding: 1em 2em;
+}
+section div{
+    padding: 2em;
+    text-align: center;
+}
+h2{
+    font-size: 2.5em;
+    padding: 1.2em 0 1.2em;
+}
+section p{
+    font-size: 1.3em;
+    margin-bottom: 3rem;
+}
+section a{
+    font-size: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+}
+#section1{
+    background-color: #cecece;
+}
+#section1 a{
+    border: 2px solid #db0f80;
+    background-color: #db0f80;
+    color:#ffffff;
+    padding: .8em 1.3em;
+}
+#section1 a:hover{
+    background-color: rgba(0,0,0,0);
+    color: #db0f80;
+}
+#section2{
+    background-color: #232428;
+    color:#ffffff;
+}
+#section2 a{
+    border: 2px solid  #24e6a9;
+    background-color:  #24e6a9;
+    color:#000000;
+    padding: .8em 1.3em;
+}
+#section2 a:hover{
+    background-color: rgba(0,0,0,0);
+    color:  #24e6a9;
+}
+#section3{
+    background-color: #db0f80;
+}
+#section3 a{
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    color:#000000;
+    padding: .8em 1.3em;
+}
+#section3 a:hover{
+    background-color: rgba(0,0,0,0);
+    color: #ffffff;
+}
+#section4{
+    background-color: #24e6a9;
+}
+#section4 a{
+    border: 2px solid #000000;
+    background-color: #000000;
+    color:#ffffff;
+    padding: .8em 1.3em;
+}
+#section4 a:hover{
+    background-color: rgba(0,0,0,0);
+    color: #000000;
+}
