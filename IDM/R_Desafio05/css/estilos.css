@@ -1,0 +1,832 @@
+/*Aquí colocamos reglas CSS para todo el documento que no dependan del ancho del dispositivo */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    transition: all .5s;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+main{
+    background: rgba(1,198,239,1);
+    background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(1,198,239,1) 10%);
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(1,198,239,1) 10%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(1,198,239,1) 10%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#01c6ef",GradientType=1);
+}
+.fuente{
+    font-size: .9rem;
+    margin-bottom: 0 !important;
+}
+/*--------------header--------------*/
+header{
+    padding: 1.2em 10%;
+    background: rgb(1,198,239);
+    background: -moz-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01c6ef",endColorstr="#ffffff",GradientType=1);
+}
+header > div{
+    font-size: 0;
+}
+header h1{
+    width: 20%;
+    height: 145px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+header h1 a{
+    background: url(../imagenes/afa_logo.png) scroll no-repeat 0 0 border-box;
+    width: 100px;
+    height: 145px;
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+header h1:hover{
+    filter: drop-shadow(0 0 0.7rem rgb(255,237,105));
+}
+nav{
+    display: inline-block;
+    /* Fix para eliminar margen no deseado. */
+    font-size: 0;
+    vertical-align: bottom;
+    width: 80%;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    min-width: 150px;
+}
+nav ul li a{
+    /* Fix para eliminar margen no deseado, debemos volver a formatear la fuente, sino no la veremos. */
+    font-size: 1rem;
+    color: #ffffff;
+    background-color:rgb(11,69,146);
+    margin: 0 5px;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+}
+nav ul li a:hover{
+    color: #ffffff;
+    background-color:rgb(0,135,196);
+    border-color:#0074c1;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+/*--------------/header--------------*/
+
+/*--------------banner--------------*/
+#banner::before{
+    content: "";
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 0;
+}
+#banner{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50vh;
+    background: url(../imagenes/argentina_campeon_1400.jpg) fixed no-repeat center 20%;
+    background-size: cover;
+}
+#banner > h2{
+    color: #ffffff;
+    font-size: 2.3em;
+    text-shadow: 2px 3px 5px rgb(0, 0, 0);
+    background-color: rgba(11, 69, 146, 0.6);
+    border-radius: 1em;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Centramos el div en el eje 'x' e 'y' con las propiedades position: absolute; top: 50% left:50% y transform: translate(-50%, -50%) que en conjunto desde el top 0 del contenedor se posiciona a 50% de este, y con el translate se traslada nuevamente su posición pero un 50% desde donde se ubicó originalmente hacia arriba, lo mismo ocurre en la dirección left. */
+    transform: translate(-50%, -50%);
+    width: 75%;
+    padding: 1em 1.1em;
+}
+/*--------------/banner--------------*/
+section{
+    margin: 1em 2em;
+    padding: 2em 4em;
+    background: rgb(255, 255, 255);
+}
+section:not(#banner){
+    border-radius: 2em;
+}
+
+/*--------------inicio--------------*/
+#inicio h3{
+    font-size: 1.5em;
+    color:rgb(11, 69, 146);
+    border-bottom: 1px solid rgb(11, 69, 146);
+    padding-bottom: .1em;
+    padding-left: 0.2em;
+    margin-top: 1em;
+    width: 75%;
+}
+#inicio > div{
+    margin: 1.5rem 1rem 3rem 1rem;
+}
+#inicio p{
+    line-height: 1.5;
+    margin-bottom: 1.2em;
+    text-align: justify;
+}
+#inicio > div figure{
+    text-align: center;
+}
+#inicio > div:nth-of-type(1){
+    font-size: 0;
+}
+#inicio > div:nth-of-type(1) p{
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(1) p:first-of-type{
+    width: calc(50% - 2rem);
+    margin-right: 2rem;
+}
+#inicio > div:nth-of-type(2){
+    font-size: 0;
+}
+#inicio > div:nth-of-type(2) > div{
+    font-size: 1rem;
+    display: inline-block;
+    width:  calc(50% - 2rem);
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(2) > figure{
+    margin-left: 5%;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 5%);
+}
+#inicio > div:nth-of-type(3){
+    font-size: 0;
+}
+#inicio > div:nth-of-type(3) > div{
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(3) > figure{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 5%);
+    margin-right: 5%;
+}
+#inicio > div:nth-of-type(4){
+    columns: 2;
+    column-gap: 3rem;
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(5){
+    font-size: 0;
+}
+#inicio > div:nth-of-type(5) > div{
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(5) > figure{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 5%);
+    margin-left: 5%;
+}
+#inicio > div:nth-of-type(6){
+    font-size: 0;
+}
+#inicio > div:nth-of-type(6) > div{
+    font-size: 1rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+#inicio > div:nth-of-type(6) > figure{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 5%);
+    margin-left: 5%;
+}
+
+/*--------------/inicio--------------*/
+
+/*--------------jugadores--------------*/
+#jugadores > h2{
+    font-size: 1.9em;
+    color:rgb(11, 69, 146);
+    border-bottom: 1px solid rgb(11, 69, 146);
+    padding-bottom: .2em;
+    padding-left: 0.3em;
+    margin-top: 1.1em;
+    width: 90%;
+}
+#jugadores > p{
+    margin: 1.5rem 1rem 3rem 1rem;
+}
+#jugadores > article{
+    /* Fix para eliminar margen no deseado*/
+    font-size: 0;
+    /* Utilizamos position:relative para posicionar relativamente el div hijo que contiene las características de los jugadores. */
+    position: relative;
+    height: 390px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 1%;
+    width: calc(50% - 1% - 16px);
+    display: inline-block;
+    vertical-align: top;
+}
+.jugador{
+    font-size: 1rem;
+    width: 45%;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    border-right: 1px dotted rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+}
+.jugador:before {
+    content: "";
+    width: 25vh;
+    height: 25vh;
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    transition: all 0.3s ease;
+    z-index: -1;
+    background: radial-gradient(circle, rgb(255, 238, 0) 0%, rgb(255, 250, 152) 100%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.capitan:after {
+    content: "C";
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    line-height: 100px;
+    width: 25vh;
+    height: 25vh;
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    top: -100%;
+    right: -100%;
+    transition: all 0.3s ease;
+    z-index: -1;
+    border-radius: 0 0 0 35%;
+    background: rgb(1, 198, 239);
+    background: -moz-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 65%, rgba(1,198,239,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 65%, rgba(1,198,239,1) 100%);
+    background: linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 65%, rgba(1,198,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01c6ef",endColorstr="#01c6ef",GradientType=1);
+}
+#jugadores > article:hover .capitan:after {
+    top: 3%;
+    right: 3%;
+    z-index: 1;
+}
+#jugadores > article:hover .jugador:before {
+    top: 3%;
+    left: 3%;
+    z-index: 1;
+}
+.jugador figure{
+    max-width: 100%;
+}
+.jugador figure img{
+    max-width: 100%;
+    height: auto;
+    transition: all 0.7s;
+    position: relative;
+    z-index: 2;
+}
+#jugadores > article:hover .jugador figure img{
+    transform: scale(1.1);
+}
+
+.jugador-contenido {
+    padding: 20px;
+    text-align: center;
+}
+.jugador-titulo {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0.3em;
+    margin-bottom: 0.6em;
+    color: #333;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    margin-top: -5%;
+}  
+#jugadores > article:hover .jugador .jugador-titulo{
+    color: #ffffff;
+    transform: scale(1.05);
+    background-color: rgb(11, 69, 146);
+    padding: 0.5em 0;
+    margin-top: 0;
+    opacity: 1;
+}
+.jugador-descripcion {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 0.2em;
+    transition: all 0.5s;
+}
+#jugadores > article:hover .jugador .jugador-descripcion{
+    transform: scale(1.05);
+    z-index: 1;
+}
+#jugadores > article > div:nth-of-type(2){
+    /* Fix para eliminar margen no deseado, debemos volver a formatear la fuente, sino no la veremos. */
+    font-size: 1rem;
+    width: 51%;
+    margin: 0 1% 0 3%;
+    /* Centramos el div en el eje y con las propiedades position: absolute; top: 50% y transform: translate(0, -50%) que en conjunto desde el top 0 del contenedor se posiciona a 50% de este, y con el translate se traslada nuevamente su posición pero un 50% desde donde se ubicó originalmente hacia arriba. */
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+#jugadores > article > div:nth-of-type(2) h2{
+    margin-bottom: .6em;
+    padding: .2em 0 .2em .2em;
+    width: 90%;
+    color: #ffffff;
+    background-color: rgb(11, 69, 146);
+}
+#jugadores > article > div:nth-of-type(2) ul{
+    margin-left: 3%;
+}
+
+#jugadores > article > div:nth-of-type(2) ul li{
+    padding: 0.2em 0;
+}
+
+#jugadores > article > div:nth-of-type(2) > div:last-of-type{
+    background: rgb(124,3,69);
+    background: -moz-radial-gradient(circle, rgba(124,3,69,1) 0%, rgba(116,1,48,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(124,3,69,1) 0%, rgba(116,1,48,1) 100%);
+    background: radial-gradient(circle, rgba(124,3,69,1) 0%, rgba(116,1,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c0345",endColorstr="#740130",GradientType=1);
+    padding: 15px;
+    border-radius: 2em;
+    border: 2px dotted #ffffff;
+    width: 95%;
+    margin: .5em 0 0 -.5em;
+    position: relative;
+    overflow: hidden;
+}
+#jugadores > article:hover > div:nth-of-type(2) h2{
+    color: rgb(11, 69, 146);
+    background-color: #ffffff;
+}
+#jugadores > article:hover > div:nth-of-type(2) > div:last-of-type{
+    background: rgb(106,2,59);
+    background: -moz-radial-gradient(circle, rgba(106,2,59,1) 0%, rgba(90,0,37,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(106,2,59,1) 0%, rgba(90,0,37,1) 100%);
+    background: radial-gradient(circle, rgba(106,2,59,1) 0%, rgba(90,0,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6a023b",endColorstr="#5a0025",GradientType=1);
+}
+#jugadores > article > div:nth-of-type(2) > div:last-of-type h3, 
+#jugadores > article > div:nth-of-type(2) > div:last-of-type li{
+    color:#ffffff !important;
+}
+#jugadores > article > div:nth-of-type(2) > div:last-of-type h3{
+    border-bottom: 1px solid #ffffff;
+    font-size: 1em;
+    width: 95%;
+    padding-left: 2%;
+    margin-bottom: 2%;
+}
+#jugadores > article > div:nth-of-type(2) > div:last-of-type li span{
+    color:rgb(255, 251, 0);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+#jugadores > article > div:nth-of-type(2) > div:last-of-type:after {
+    content: "";
+    background: url(../imagenes/logo_qatar.png) no-repeat center center;
+    background-size: contain;
+    width: 25vh;
+    height: 25vh;
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    bottom: 25%;
+    right: 1em;
+    transition: all .5s ease;
+    z-index: -1;
+    opacity: 0;
+}
+#jugadores > article:hover > div:nth-of-type(2) > div:last-of-type:after{
+    opacity: 1;
+    z-index: 1;
+}
+
+#contacto h2{
+    font-size: 1.9em;
+    text-align: center;
+    color:rgb(11, 69, 146);
+    border-bottom: 1px solid rgb(11, 69, 146);
+    padding-bottom: .2em;
+    padding-left: 0.3em;
+    margin: 1.1em auto 0;
+    width: 90%;
+}
+#contacto p{
+    text-align: center;
+    margin: 1.1em auto 0;
+    width: 90%;
+}
+#contacto form > div{
+    width: 50%;
+    font-size: 0;
+    text-align: center;
+    margin: 3% auto;
+}
+
+#contacto form > div > input[type="email"] {
+    display: inline-block;
+    min-height: 50px;
+    min-width: 150px;
+    width: 80%;
+    padding: 0 1rem;
+    color: rgb(11, 69, 146);
+    font-size: 1rem;
+    border: 1px solid rgb(11, 69, 146);
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+#contacto form > div > input[type="submit"] {
+    display: inline-block;
+    min-height: 50px;
+    min-width: 100px;
+    width:20%;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color:  rgb(11, 69, 146);
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+#contacto form > div > input[type="submit"]:hover {
+    background-color: rgb(0,135,196);
+}
+
+#contacto form > div > input[type="email"]:focus, 
+#contacto form > div > input[type="email"]:focus-visible {
+    border-color: rgb(0,135,196);
+    box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+footer{
+    padding: 1.2em 15%;
+    background: rgb(1,198,239);
+    background: -moz-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(1,198,239,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01c6ef",endColorstr="#ffffff",GradientType=1);
+    text-align: center;
+}
+
+/*----------------------------------------*/
+/* Configuración de Media Querie para estilos específicos para celulares (hasta 480px de ancho). */
+@media screen and (max-width:480px){
+    header{
+        padding: 1.2em 5%;
+    }
+    header h1{
+        width: 100%;
+        display: block;
+        margin: 0 auto 1rem;
+        text-align: center;
+        background-position: center center;
+    }
+    nav{
+        width: 100%;
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        min-width: 150px;
+        margin: 5px;
+    }
+    #banner > h2 {
+        font-size: 2.1em;
+    }
+    section{
+        border-radius: 1em !important;
+        margin: 2%;
+        padding: .3em 1em;
+    }
+    .fuente {
+        padding-left: 1em;
+    }
+    #inicio > div {
+        margin: 1rem;
+    }
+    #inicio h3 {
+        width: 95%;
+    }
+    #inicio > div:nth-child(n) :nth-child(n):not(img){
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    #inicio > div:nth-of-type(3) > div {
+        margin-top: 1.2em;
+    }
+    #inicio > div:nth-of-type(4) {
+        columns: unset;
+    }
+    #inicio > div:nth-of-type(6) > figure {
+        margin-top: 5%;
+    }
+    #jugadores > h2 {
+        font-size: 1.6em;
+        width: 100%;
+    }
+    #jugadores > article {
+        display: block;
+        width: calc(100% - 1%);
+        height: initial;
+        margin: 3% 1%;
+        padding-bottom: 5%;;
+    }
+    .jugador{
+        display: block;
+        width: 100%;
+        position: initial;
+        transform: none;
+        border: none;
+    }
+    .jugador:before {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .capitan:after {
+        font-size: 6em;
+        max-width: 100px;
+        max-height: 100px;
+    }
+    #jugadores > article > div:nth-of-type(2) {
+        width: 100%;
+        position: initial;
+        transform: none;
+        padding: 20px;
+        margin: 0;
+    }
+    #jugadores > article > div:nth-of-type(2) h2 {
+        text-align: center;
+        width: 100%;
+    }
+    #jugadores > article .jugador .jugador-titulo {
+        display: none !important;
+    }
+    #jugadores > article .jugador .jugador-descripcion {
+        display: none !important;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type {
+        width: 100%;
+        margin: .5em 0 0 0;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type:after {
+        right: 5%;
+    }
+    #contacto form > div {
+        width: 100%;
+    }
+    #contacto form > div > input[type="email"] {
+        min-width: 50px;
+        width: 50%;
+    }
+}
+
+/*----------------------------------------*/
+/* Configuración de Media Querie para estilos específicos para tablets (hasta 768px de ancho).*/
+@media screen and (min-width:481px) and (max-width:768px){
+    header{
+        padding: 1.2em 5%;
+    }
+    header h1{
+        width: 100%;
+        display: block;
+        margin: 0 auto 1rem;
+        text-align: center;
+        background-position: center center;
+    }
+    nav{
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        min-width: 150px;
+        margin: 5px;
+    }
+    #banner > h2 {
+        font-size: 2.5em;
+    }
+    section{
+        border-radius: 1em !important;
+        margin: 2%;
+        padding: .3em 1em;
+    }
+    .fuente {
+        padding-left: 1em;
+    }
+    #inicio > div {
+        margin: 1rem;
+    }
+    #inicio h3 {
+        width: 95%;
+    }
+    #inicio > div:nth-child(n) :nth-child(n):not(img){
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    #inicio > div:nth-of-type(3) > div {
+        margin-top: 1.2em;
+    }
+    #inicio > div:nth-of-type(4) {
+        columns: unset;
+    }
+    #inicio > div:nth-of-type(6) > figure {
+        margin-top: 5%;
+    }
+    #jugadores > h2 {
+        font-size: 1.6em;
+        width: 100%;
+    }
+    #jugadores > article {
+        display: block;
+        width: calc(100% - 1%);
+        height: initial;
+        margin: 3% 1%;
+        padding-bottom: 5%;;
+    }
+    .jugador{
+        display: block;
+        width: 100%;
+        position: initial;
+        transform: none;
+        border: none;
+    }
+    .jugador:before {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .capitan:after {
+        font-size: 10em;
+        max-width: 200px;
+        max-height: 200px;
+        line-height: normal;
+    }
+    #jugadores > article > div:nth-of-type(2) {
+        width: 100%;
+        position: initial;
+        transform: none;
+        padding: 20px;
+        margin: 0;
+    }
+    #jugadores > article > div:nth-of-type(2) h2 {
+        text-align: center;
+        width: 100%;
+    }
+    #jugadores > article .jugador .jugador-titulo {
+        display: none !important;
+    }
+    #jugadores > article .jugador .jugador-descripcion {
+        display: none !important;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type {
+        width: 100%;
+        margin: .5em 0 0 0;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type:after {
+        right: 5%;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type h3 {
+        padding-bottom: 1%;
+    }
+    #contacto form > div {
+        width: 100%;
+    }
+    #contacto form > div > input[type="email"] {
+        min-width: 100px;
+        width: 60%;
+    }
+}
+
+/*----------------------------------------*/
+/* Configuración de Media Querie para estilos específicos para PCs o Laptops (de 769 en adelante). */
+@media screen and (min-width:769px){
+    header > div{
+        max-width: 1400px;
+        margin: auto;
+    }
+    #banner > h2{
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width: 1399px){
+    #jugadores > article {
+        height: auto;
+    }
+    .jugador{
+        display: block;
+        width: 100%;
+        position: relative;
+        transform: none;
+        border: none;
+    }
+    #jugadores > article > div:nth-of-type(2) {
+        width: 100%;
+        position: relative;
+        transform: none;
+        padding: 20px;
+        margin: 0;
+    }
+    #jugadores > article > div:nth-of-type(2) h2 {
+        text-align: center;
+        width: 100%;
+    }
+    #jugadores > article > div:nth-of-type(2) ul {
+        margin-left: 3%;
+    }
+    #jugadores > article > div:nth-of-type(2) > div:last-of-type {
+        width: 100%;
+        margin: 0.5em 0 0 0;
+    }
+    #jugadores > article .jugador .jugador-titulo,
+    #jugadores > article .jugador .jugador-descripcion {
+        display: none !important;
+    }
+    #contacto form > div {
+        width: max(80%, 70%);
+    }
+    #contacto form > div > input[type="email"] {
+        width: 70%;
+     }
+}
+
+@media screen and (min-width:1400px){
+    header{
+        padding: 1.2em 15%;
+    }
+    
+    section:not(:first-of-type){
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #jugadores > article {
+        height: 430px;
+        padding-top: 30px;
+    }
+}
+
+
